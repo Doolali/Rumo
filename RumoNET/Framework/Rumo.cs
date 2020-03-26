@@ -1,11 +1,11 @@
 ﻿using Microsoft.Extensions.Options;
 using RestSharp;
-using Rumo.Enums;
-using Rumo.Models;
-using Rumo.Options;
+using RumoNET.Enums;
+using RumoNET.Models;
+using RumoNET.Options;
 using System.Collections.Generic;
 
-namespace Rumo.Framework
+namespace RumoNET.Framework
 {
     public class Rumo
     {

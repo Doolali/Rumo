@@ -1,8 +1,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
-using Rumo.Models;
+using RumoNET.Models;
 
-namespace Rumo.Tests
+namespace RumoNET.Tests
 {
     [TestClass]
     public class UnitTest1

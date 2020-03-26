@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Rumo\Rumo.csproj" />
+    <ProjectReference Include="..\RumoNET\RumoNET.csproj" />
   </ItemGroup>
 
 </Project>

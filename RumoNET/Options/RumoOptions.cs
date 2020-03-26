@@ -1,4 +1,4 @@
-﻿namespace Rumo.Options
+﻿namespace RumoNET.Options
 {
     public class RumoOptions
     {

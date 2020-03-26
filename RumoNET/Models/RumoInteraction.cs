@@ -1,7 +1,7 @@
-﻿using Rumo.Enums;
+﻿using RumoNET.Enums;
 using System;
 
-namespace Rumo.Models
+namespace RumoNET.Models
 {
     public class RumoInteraction
     {

@@ -1,4 +1,4 @@
-﻿namespace Rumo.Models
+﻿namespace RumoNET.Models
 {
     public class RumoSubmission
     {

@@ -1,4 +1,4 @@
-﻿namespace Rumo.Enums
+﻿namespace RumoNET.Enums
 {
     public enum RumoInteractionType
     {

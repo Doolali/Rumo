@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Rumo.Models
+namespace RumoNET.Models
 {
     public class RumoUserEvent
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Rumo.Models
+namespace RumoNET.Models
 {
     public class RumoRecommendation
     {
