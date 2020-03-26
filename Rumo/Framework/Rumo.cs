@@ -42,7 +42,8 @@ namespace Rumo.Framework
         /// <summary>
         ///  Submitting/Updating Content
         ///  Object representing your content submission to the database.
-        ///  You need both your source and your API key to identify and submit your content. The first time you submit it, the source is created in real-time. You should keep each source submission limited to 2000 entries.
+        ///  You need both your source and your API key to identify and submit your content. The first time you submit it, the source is created in real-time.
+        ///  You should keep each source submission limited to 2000 entries.
         ///  If you add two contents with the same ID to your source, the most recent item takes precedence, overwriting the previous entry
         ///  https://beta.api.rumo.co/{{$source}} 
         /// </summary>
@@ -278,7 +279,8 @@ namespace Rumo.Framework
         /// <param name="userId">The User Id to get recommendations for</param>
         /// <param name="catalogs">List of Strings used to filter by catalog</param>
         /// <param name="take">The number of recommendations to return</param>
-        /// <param name="algo">String showing the recommendation algorithm to use. Could be Jaccard Index (with non-weighted categories) or Cosine Similarity (with weighted categories).</param>
+        /// <param name="algo">String showing the recommendation algorithm to use. Could be Jaccard Index (with non-weighted categories) or Cosine Similarity
+        /// (with weighted categories).</param>
         /// <returns></returns>
         public RumoRecommendation GetPersonalizedRecommendation(string userId, List<string> catalogs = null)
         {
@@ -320,7 +322,8 @@ namespace Rumo.Framework
         /// <param name="userId">The User Id to get recommendations for</param>
         /// <param name="catalogs">List of Strings used to filter by catalog</param>
         /// <param name="take">The number of recommendations to return</param>
-        /// <param name="algo">String showing the recommendation algorithm to use. Could be Jaccard Index (with non-weighted categories) or Cosine Similarity (with weighted categories).</param>
+        /// <param name="algo">String showing the recommendation algorithm to use. Could be Jaccard Index (with non-weighted categories) or Cosine Similarity
+        /// (with weighted categories).</param>
         /// <returns></returns>
         public RumoRecommendation GetPersonalizedRecommendation(string userId, List<string> catalogs = null, int take = 0, string algo = null)
         {
