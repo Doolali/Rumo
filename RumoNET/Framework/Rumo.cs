@@ -237,7 +237,7 @@ namespace RumoNET.Framework
         /// <returns></returns>
         public List<RumoInteraction> GetInteractions(string userId)
         {
-            return GetInteractions(userId);
+            return GetInteractions(userId, null);
         }
 
         /// <summary>
