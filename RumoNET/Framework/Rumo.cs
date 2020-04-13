@@ -16,26 +16,26 @@ namespace RumoNET.Framework
 
         public string BaseUrl { get; private set; }
 
-        private RestClient _restClient;
+        private IRestClient _restClient;
 
         public Rumo(IOptions<RumoOptions> options)
         {
-            Init(options.Value.ApiKey, options.Value.Source);
+            Init(options.Value.Url, options.Value.ApiKey, options.Value.Source);
         }
 
-        public Rumo(string apiKey, string source)
+        public Rumo(string url, string apiKey, string source)
         {
-            Init(apiKey, source);
+            Init(url, apiKey, source);
         }
 
-        private void Init(string apiKey, string source)
+        private void Init(string url, string apiKey, string source)
         {
             _apiKey = apiKey;
             _source = source;
 
-            BaseUrl = $"https://beta.api.rumo.co/{_source}/";
+            BaseUrl = $"{url}{_source}/";
 
-            _restClient = new RestClient(BaseUrl);
+            _restClient = new RestClient(BaseUrl).UseSerializer(new JsonNetSerializer());
             _restClient.AddDefaultHeader(API_KEY_HEADER, _apiKey);
         }
 
@@ -70,7 +70,9 @@ namespace RumoNET.Framework
 
             request.AddJsonBody(content);
 
-            return _restClient.Execute<RumoSubmission>(request).Data;
+            var r = _restClient.Execute<RumoSubmission>(request);
+
+            return r.Data;
         }
 
         /// <summary>

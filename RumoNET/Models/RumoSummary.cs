@@ -1,8 +1,10 @@
-﻿namespace RumoNET.Models
+﻿using System.Collections.Generic;
+
+namespace RumoNET.Models
 {
     public class RumoSummary
     {
         public int count { get; set; }
-        public string[] content { get; set; }
+        public List<string> content { get; set; }
     }
 }
