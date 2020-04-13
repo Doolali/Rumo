@@ -59,6 +59,25 @@ namespace RumoNET.Framework
         }
 
         /// <summary>
+        ///  Submitting/Updating Content
+        ///  Object representing your content submission to the database.
+        ///  You need both your source and your API key to identify and submit your content. The first time you submit it, the source is created in real-time.
+        ///  You should keep each source submission limited to 2000 entries.
+        ///  If you add two contents with the same ID to your source, the most recent item takes precedence, overwriting the previous entry
+        ///  https://beta.api.rumo.co/{{$source}} 
+        /// </summary>
+        /// <param name="content"></param>
+        /// <returns></returns>
+        public RumoSubmission SubmitContent(List<RumoContent> content)
+        {
+            RestRequest request = new RestRequest(Method.POST);
+
+            request.AddJsonBody(content);
+
+            return _restClient.Execute<RumoSubmission>(request).Data;
+        }
+
+        /// <summary>
         ///  Retrieving Content
         ///  Object representing the verification of your content uploaded to the database.
         ///  https://beta.api.rumo.co/{{$source}} 
