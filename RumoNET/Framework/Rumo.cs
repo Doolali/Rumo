@@ -51,11 +51,7 @@ namespace RumoNET.Framework
         /// <returns></returns>
         public RumoSubmission SubmitContent(RumoContent content)
         {
-            RestRequest request = new RestRequest(Method.POST);
-
-            request.AddJsonBody(content);
-
-            return _restClient.Execute<RumoSubmission>(request).Data;
+            return SubmitContent(new List<RumoContent> { content });
         }
 
         /// <summary>
