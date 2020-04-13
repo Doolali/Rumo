@@ -70,9 +70,7 @@ namespace RumoNET.Framework
 
             request.AddJsonBody(content);
 
-            var r = _restClient.Execute<RumoSubmission>(request);
-
-            return r.Data;
+            return _restClient.Execute<RumoSubmission>(request).Data;
         }
 
         /// <summary>
